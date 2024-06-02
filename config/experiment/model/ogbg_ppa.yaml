@@ -1,0 +1,11 @@
+# @package _global_
+model:
+  name: ppa
+  walk_encoder: conv
+  num_layers: 1
+  hidden_size: 384
+  d_conv: 9
+  local_mp_type: gin
+  global_mp_type: performer
+  proj_mlp_ratio: 2
+  use_encoder_norm: false

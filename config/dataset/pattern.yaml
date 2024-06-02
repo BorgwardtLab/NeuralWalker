@@ -1,0 +1,8 @@
+name: PATTERN
+cls_name: torch_geometric.datasets.GNNBenchmarkDataset
+path: ./datasets/PATTERN
+in_node_dim: 3
+in_edge_dim: null
+num_class: 2
+loss: wce
+metric: accuracy_sbm

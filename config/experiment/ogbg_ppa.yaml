@@ -1,0 +1,21 @@
+# @package _global_
+defaults:
+  - model: ogbg_ppa
+
+training:
+  lr: 0.002
+  epochs: 200
+  warmup: 10
+  weight_decay: 0.0
+  batch_size: 32
+
+random_walk:
+  length: 200
+  window_size: 32
+  sample_rate: 0.5
+
+model:
+  node_embed: true
+  edge_embed: false
+  dropout: 0.4
+  global_pool: mean

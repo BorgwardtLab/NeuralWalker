@@ -1,0 +1,18 @@
+# @package _global_
+defaults:
+  - model: mamba_6L
+
+training:
+  lr: 0.002
+  epochs: 200
+  warmup: 10
+  weight_decay: 0.0
+  batch_size: 32
+
+random_walk:
+  length: 100
+  window_size: 16
+  sample_rate: 0.25
+
+model:
+  global_pool: null

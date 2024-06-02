@@ -1,0 +1,32 @@
+defaults:
+  - _self_
+  - dataset: zinc
+
+outdir: ./outputs
+random_walk:
+  length: [25, 50, 100, 200]
+  window_size: [8, 16, 32, 64]
+  sample_rate: [0.25, 0.5, 0.75, 1.0]
+
+training:
+  lr: [0.001, 0.002, 0.004, 0.01]
+  weight_decay: [0.0, 1e-06]
+
+model:
+  name: [
+    mamba+vn_3L,
+    conv+vn_3L,
+    mamba_3L,
+    mamba+transformer_5L,
+    mamba+vn_6L,
+    mamba_6L,
+    s4+vn_3L,
+    transformer+vn_3L,
+    mamba+vn_cluster,
+    ogbg_molpcba,
+    ogbg_ppa,
+    ogbg_code2,
+  ]
+  dropout: [0.0, 0.2, 0.4]
+  bidirection: [true]
+  global_pool: [sum, mean, null]

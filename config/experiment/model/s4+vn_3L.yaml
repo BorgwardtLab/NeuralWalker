@@ -1,0 +1,8 @@
+# @package _global_
+model:
+  name: s4+vn_3L
+  walk_encoder: s4
+  num_layers: 3
+  hidden_size: 90
+  local_mp_type: gin
+  global_mp_type: vn

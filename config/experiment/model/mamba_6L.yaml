@@ -1,0 +1,9 @@
+# @package _global_
+model:
+  name: mamba_6L
+  walk_encoder: mamba
+  num_layers: 6
+  hidden_size: 56
+  d_conv: 4
+  local_mp_type: gin
+  global_mp_type: null

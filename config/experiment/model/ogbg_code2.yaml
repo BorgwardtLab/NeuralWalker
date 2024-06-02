@@ -1,0 +1,11 @@
+# @package _global_
+model:
+  name: code2
+  walk_encoder: conv
+  num_layers: 3
+  hidden_size: 256
+  d_conv: 9
+  local_mp_type: gin
+  global_mp_type: transformer
+  proj_mlp_ratio: 1
+  use_encoder_norm: false

@@ -1,0 +1,8 @@
+name: PCQM-Contact
+cls_name: torch_geometric.datasets.LRGBDataset
+path: ./datasets/LRGBDataset
+in_node_dim: atom
+in_edge_dim: bond
+num_class: 2
+loss: bce
+metric: mrr

@@ -1,0 +1,8 @@
+name: MNIST
+cls_name: torch_geometric.datasets.GNNBenchmarkDataset
+path: ./datasets/MNIST
+in_node_dim: 3
+in_edge_dim: 1
+num_class: 10
+loss: ce
+metric: accuracy

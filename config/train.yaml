@@ -1,0 +1,76 @@
+defaults:
+  - _self_
+  - dataset: ${experiment}
+  - experiment: zinc
+  - experiment/model: null
+  - mode: default
+
+debug: false
+seed: 0
+test_runs: 5
+outdir_prefix: outputs
+outdir: 
+  "${outdir_prefix}/${dataset.name}\
+  /${random_walk.length}_${random_walk.window_size}_${random_walk.sample_rate}\
+  /${training.lr}_${training.weight_decay}\
+  /${model.name}_${model.bidirection}_${model.dropout}_${model.global_pool}\
+  /${seed}"
+
+compute:
+  accelerator: auto
+  precision: 32
+
+random_walk:
+  _target_: neuralwalker.data.transforms.RandomWalkSampler
+  length: 50
+  sample_rate: 1.0
+  backtracking: false
+  pad_idx: -1
+  strict: false
+  window_size: 8
+  test_length: ${random_walk.length}
+
+training:
+  loss: ${dataset.loss}
+  batch_size: 32
+  epochs: 100
+  iterations: null
+  lr: 0.002
+  lr_schedule: cosine
+  weight_decay: 0.0
+  warmup: 10
+  num_workers: 8
+  pin_memory: true
+
+model:
+  in_node_dim: ${dataset.in_node_dim}
+  num_class: ${dataset.num_class}
+  in_edge_dim: ${dataset.in_edge_dim}
+  node_embed: false
+  edge_embed: false
+  walk_pos_embed: false
+  walk_length: ${random_walk.length}
+  use_positional_encoding: true
+  window_size: ${random_walk.window_size}
+  bidirection: true
+  use_encoder_norm: true
+  local_mp_type: gin
+  global_mp_type: vn
+  dropout: 0.0
+  attn_dropout: 0.5
+  node_out: true
+  global_pool: mean
+  head: mlp
+  pad_idx: ${random_walk.pad_idx}
+
+logs:
+  prefix: logs/${dataset.name}/${model.name}/${seed}
+  path: ${logs.prefix}/runs/${now:%Y-%m-%d}_${now:%H-%M-%S}
+
+# output directory, generated dynamically on each run
+hydra:
+  run:
+    dir: ${logs.path}
+  sweep:
+    dir: ${logs.prefix}/multiruns/${now:%Y-%m-%d}_${now:%H-%M-%S}
+    subdir: ${hydra.job.num}

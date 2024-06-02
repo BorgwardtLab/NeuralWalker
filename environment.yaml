@@ -1,0 +1,26 @@
+name: neuralwalker
+channels:
+  - pyg
+  - pytorch
+  - nvidia
+  - defaults
+  - conda-forge
+dependencies:
+  - python>=3.9
+  - numpy
+  - scipy
+  - pytorch>=2.0.1
+  - pytorch-cuda=11.8
+  - pyg>=2.3
+  - cython=3.0.9
+  - pandas
+  - einops
+  - lightning
+  - scikit-learn
+  - pip:
+      - pyprojroot
+      - easydict 
+      - hydra-core
+      - causal-conv1d>=1.2.0
+      - mamba-ssm
+      - ogb

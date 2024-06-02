@@ -1,0 +1,9 @@
+# @package _global_
+model:
+  name: mamba+vn_3L
+  walk_encoder: mamba
+  num_layers: 3
+  hidden_size: 80
+  d_conv: 4
+  local_mp_type: gin
+  global_mp_type: vn

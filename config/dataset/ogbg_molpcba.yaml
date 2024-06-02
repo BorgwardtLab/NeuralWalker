@@ -1,0 +1,8 @@
+name: ogbg-molpcba
+cls_name: ogb.graphproppred.PygGraphPropPredDataset
+path: ./datasets/OGBGDataset
+in_node_dim: atom
+in_edge_dim: bond
+num_class: 128
+loss: mce
+metric: ogbg-ap

@@ -1,0 +1,8 @@
+name: Peptides-func
+cls_name: torch_geometric.datasets.LRGBDataset
+path: ./datasets/LRGBDataset
+in_node_dim: atom
+in_edge_dim: bond
+num_class: 10
+loss: mce
+metric: ap

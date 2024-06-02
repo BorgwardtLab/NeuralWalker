@@ -1,0 +1,9 @@
+# @package _global_
+model:
+  name: transformer+vn_3L
+  walk_encoder: transformer
+  num_layers: 3
+  hidden_size: 96
+  local_mp_type: gin
+  global_mp_type: vn
+  mlp_ratio: 2

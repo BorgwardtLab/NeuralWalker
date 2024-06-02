@@ -1,0 +1,8 @@
+name: PascalVOC-SP
+cls_name: torch_geometric.datasets.LRGBDataset
+path: ./datasets/LRGBDataset
+in_node_dim: 14
+in_edge_dim: 2
+num_class: 21
+loss: wce
+metric: f1

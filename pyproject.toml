@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gram"
+authors = [
+    {name = "Dexiong Chen", email = "dchen@biochem.mpg.de"},
+]
+description = "Learning long-range dependencies on graphs via random walks"
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["graph neural networks", "random walks", "state space models", "graph transformers"]
+license = {text = "BSD-3-Clause"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dynamic = ["version"]
+
+[tool.setuptools]
+packages = ["neuralwalker"]

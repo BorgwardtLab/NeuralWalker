@@ -1,0 +1,9 @@
+# @package _global_
+model:
+  name: mamba+transformer_5L
+  walk_encoder: mamba
+  num_layers: 5
+  hidden_size: 56
+  d_conv: 4
+  local_mp_type: gin
+  global_mp_type: transformer

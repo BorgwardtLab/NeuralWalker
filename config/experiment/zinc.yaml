@@ -1,0 +1,20 @@
+# @package _global_
+defaults:
+  - model: mamba+vn_3L
+
+training:
+  lr: 0.002
+  epochs: 500
+  warmup: 50
+  weight_decay: 0.0
+  batch_size: 50
+
+random_walk:
+  length: 50
+  window_size: 8
+  sample_rate: 1.0
+
+model:
+  node_embed: true
+  edge_embed: true
+  global_pool: sum

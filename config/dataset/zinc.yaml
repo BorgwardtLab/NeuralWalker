@@ -1,0 +1,8 @@
+name: zinc
+cls_name: torch_geometric.datasets.ZINC
+path: ./datasets/ZINC
+in_node_dim: 21
+in_edge_dim: 4
+num_class: 1
+loss: l1
+metric: mae

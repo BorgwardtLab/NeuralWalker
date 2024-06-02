@@ -1,0 +1,8 @@
+name: CLUSTER
+cls_name: torch_geometric.datasets.GNNBenchmarkDataset
+path: ./datasets/CLUSTER
+in_node_dim: 7
+in_edge_dim: null
+num_class: 6
+loss: wce
+metric: accuracy_sbm
