@@ -55,7 +55,6 @@ class WalkEncoder(nn.Module):
             self.seq_layer = nn.Sequential(
                 Rearrange("a b c -> a c b"),
                 nn.Conv1d(hidden_size, hidden_size, d_conv, groups=hidden_size, padding=d_conv // 2),
-                # nn.BatchNorm1d(hidden_size),
                 nn.ReLU(),
                 nn.Conv1d(hidden_size, hidden_size, 1, padding=0),
                 nn.ReLU(),
@@ -89,7 +88,6 @@ class WalkEncoder(nn.Module):
             nn.Linear(hidden_size * proj_mlp_ratio, hidden_size),
             nn.Dropout(dropout),
         )
-        # self.node_ln = nn.LayerNorm(hidden_size, eps=1e-05)
 
         if use_edge_proj:
             self.out_edge_proj = nn.Sequential(
@@ -141,7 +139,6 @@ class WalkEncoder(nn.Module):
             dim_size=num_nodes,
         )
 
-        # x = self.node_ln(x + self.out_node_proj(node_agg))
         x = x + self.out_node_proj(node_agg)
 
         if self.use_edge_proj:

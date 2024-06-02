@@ -1,7 +1,7 @@
 import torch
 import torch.nn.functional as F
 from torch_geometric.nn import GATConv, GCNConv
-from neuralwalker import WalkEncoder
+from walk_encoder import WalkEncoder
 
 class GlobalAttn(torch.nn.Module):
     def __init__(self, hidden_channels, heads, num_layers, beta, dropout, qk_shared=True):
