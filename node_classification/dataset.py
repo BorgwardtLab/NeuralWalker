@@ -6,8 +6,7 @@ from ogb.nodeproppred import NodePropPredDataset
 import numpy as np
 import scipy.sparse as sp
 from os import path
-#from google_drive_downloader import GoogleDriveDownloader as gdd
-# import gdown
+import gdown
 import scipy
 
 from data_utils import dataset_drive_url
@@ -202,9 +201,6 @@ def load_pokec_mat(data_dir):
         drive_id = '1575QYJwJlj7AWuOKMlwVmMz8FcslUncu'
         gdown.download(id=drive_id, output="data/pokec/")
         #import sys; sys.exit()
-        #gdd.download_file_from_google_drive(
-        #    file_id= drive_id, \
-        #    dest_path=f'{data_dir}/pokec/pokec.mat', showsize=True)
 
     fulldata = scipy.io.loadmat(f'{data_dir}/pokec/pokec.mat')
 
