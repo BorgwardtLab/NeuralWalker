@@ -2,12 +2,10 @@ import os
 import logging
 import hydra
 from pyprojroot import here
-from pathlib import Path
 import numpy as np
 import pandas as pd
 
 import torch
-from torch_geometric.loader import DataLoader
 from torch_geometric.transforms import Compose
 from omegaconf import OmegaConf
 import pytorch_lightning as pl
@@ -16,7 +14,7 @@ from timeit import default_timer as timer
 
 from neuralwalker.models import NeuralWalker_pl
 from neuralwalker.data import get_dataset
-from neuralwalker.data.transforms import RandomWalkSampler, Preprocessor, feature_normalization
+from neuralwalker.data.transforms import Preprocessor, feature_normalization
 from neuralwalker.utils import update_cfg
 
 torch.backends.cuda.matmul.allow_tf32 = True  # Default False in PyTorch 1.12+
