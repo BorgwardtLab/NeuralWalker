@@ -3,7 +3,6 @@ channels:
   - pyg
   - pytorch
   - nvidia
-  - defaults
   - conda-forge
 dependencies:
   - python>=3.9
@@ -18,7 +17,7 @@ dependencies:
   - einops
   - lightning
   - scikit-learn
-  - cuda-nvcc
+  - cuda
   - pip:
       - pyprojroot
       - easydict 
