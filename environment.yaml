@@ -9,7 +9,7 @@ dependencies:
   - pip
   - numpy
   - scipy
-  - pytorch=2.2.*
+  - pytorch=2.0.*
   - pytorch-cuda=11.8
   - pyg=2.3.*
   - cython=3.0.9
@@ -19,7 +19,7 @@ dependencies:
   - scikit-learn
   - cuda-nvcc=11.8
   - pip:
-    - --find-links https://data.pyg.org/whl/torch-2.2.0+cu118.html
+    - --find-links https://data.pyg.org/whl/torch-2.0.0+cu118.html
     - pyprojroot
     - easydict 
     - hydra-core
