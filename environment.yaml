@@ -17,7 +17,7 @@ dependencies:
   - einops
   - lightning
   - scikit-learn
-  - cuda
+  - cuda-nvcc=11.8
   - pip:
     - pyprojroot
     - easydict 
