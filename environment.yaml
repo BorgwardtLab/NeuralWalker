@@ -18,6 +18,7 @@ dependencies:
   - lightning
   - scikit-learn
   - cuda-nvcc=11.8
+  - mkl=2022.2.1
   - pip:
     - --find-links https://data.pyg.org/whl/torch-2.0.0+cu118.html
     - pyprojroot
