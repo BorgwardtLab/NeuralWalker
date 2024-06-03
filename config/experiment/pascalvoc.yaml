@@ -1,6 +1,6 @@
 # @package _global_
 defaults:
-  - model: mamba+transformer_6L
+  - model: mamba+transformer_5L
 
 training:
   lr: 0.002
