@@ -19,10 +19,11 @@ dependencies:
   - scikit-learn
   - cuda-nvcc=11.8
   - pip:
+    - --find-links https://data.pyg.org/whl/torch-2.2.0+cu118.html
     - pyprojroot
     - easydict 
     - hydra-core
-    - torch-scatter -f https://data.pyg.org/whl/torch-2.2.0+cu118.html
+    - torch-scatter
     - causal-conv1d>=1.2.0
     - mamba-ssm==1.2.0.post1
     - ogb
