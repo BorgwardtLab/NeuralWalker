@@ -7,6 +7,8 @@ The repository implements the NeuralWalker in [Pytorch Geometric][1] described i
 
 **TL;DR**: A novel random-walk based neural architecture for graph representation learning.
 
+## Overview
+
 ![NeuralWalker](images/overview.png)
 
 NeuralWalker samples random walks with a predefined sampling rate and length, then uses advanced sequence models to process them. 
@@ -28,6 +30,8 @@ micromamba activate neuralwalker
 pip install -e .
 ```
 
+__Note__: our code is also compatible with newer Pytorch versions, your can use `micromamba env create -f environment_latest.yaml` for development purposes.
+
 ## Reproducing results in the paper
 
 ### Train NeuralWalker on Benchmarking GNNs, LRGB, and OGB
@@ -36,9 +40,9 @@ All configurations for the experiments are managed by [hydra](https://hydra.cc/)
 
 Below you can find the list of experiments conducted in the paper:
 
-- Benchmarking GNNs: zinc, mnist, cifar10, pattern, cluster
-- LRGB: pascalvoc, coco, peptides_func, peptides_struct, pcqm_contact
-- OGB: ogbg_molpcba, ogbg_ppa, ogbg_code2
+- [Benchmarking GNNs](https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.GNNBenchmarkDataset.html#torch_geometric.datasets.GNNBenchmarkDataset): zinc, mnist, cifar10, pattern, cluster
+- [LRGB](https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.LRGBDataset.html#torch_geometric.datasets.LRGBDataset): pascalvoc, coco, peptides_func, peptides_struct, pcqm_contact
+- [OGB](https://ogb.stanford.edu/docs/graphprop/): ogbg_molpcba, ogbg_ppa, ogbg_code2
 
 ```bash
 python train.py experiment=zinc
