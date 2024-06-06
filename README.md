@@ -75,4 +75,4 @@ python train.py mode=debug
 
 
 [1]: https://pytorch-geometric.readthedocs.io/
-[2]: 
+[2]: https://arxiv.org/pdf/2406.03386
