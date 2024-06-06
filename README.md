@@ -1,5 +1,10 @@
 # :walking: NeuralWalker
 
+[![arXiv](https://img.shields.io/badge/arXiv-2406.03386-b31b1b.svg)][2]
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/learning-long-range-dependencies-on-graphs/node-classification-on-pascalvoc-sp-1)](https://paperswithcode.com/sota/node-classification-on-pascalvoc-sp-1?p=learning-long-range-dependencies-on-graphs)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/learning-long-range-dependencies-on-graphs/node-classification-on-coco-sp)](https://paperswithcode.com/sota/node-classification-on-coco-sp?p=learning-long-range-dependencies-on-graphs)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/learning-long-range-dependencies-on-graphs/link-prediction-on-pcqm-contact)](https://paperswithcode.com/sota/link-prediction-on-pcqm-contact?p=learning-long-range-dependencies-on-graphs)
+
 The repository implements the NeuralWalker in [Pytorch Geometric][1] described in the following paper
 
 >Dexiong Chen, Till Schulz, and Karsten Borgwardt.
@@ -75,4 +80,4 @@ python train.py mode=debug
 
 
 [1]: https://pytorch-geometric.readthedocs.io/
-[2]: https://arxiv.org/pdf/2406.03386
+[2]: https://arxiv.org/abs/2406.03386
