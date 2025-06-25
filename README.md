@@ -8,7 +8,7 @@
 The repository implements the NeuralWalker in [Pytorch Geometric][1] described in the following paper
 
 >Dexiong Chen, Till Schulz, and Karsten Borgwardt.
-[Learning Long Range Dependencies on Graphs via Random Walks][2], Preprint 2024.
+[Learning Long Range Dependencies on Graphs via Random Walks][2], ICLR 2025.
 
 **TL;DR**: A novel random-walk based neural architecture for graph representation learning.
 
